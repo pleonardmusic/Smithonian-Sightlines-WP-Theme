@@ -1,0 +1,1407 @@
+/*
+Theme Name: Smithsonian Apac Sightlines Theme
+Template: twentytwentyfour
+Author: Peter Leonard
+Author URI: https://wordpress.org
+Version: 1.0.1715380837
+Updated: 2024-05-10 22:40:37
+
+*/
+
+/* SITE-WIDE STYLES ----------------- */
+  h1, h2, h3, h4, h5, h6 {
+    color:  var(--wp--preset--color--custom-blue-2);
+  }
+
+/* Remove focus outline for mouse users */
+
+/* Apply default focus style to all focusable elements */
+:focus {
+  outline: 2px solid var(--wp--preset--color--custom-orange) !important;
+  outline-offset: 2px; /* Adjust if needed to separate the outline from the element */
+}
+
+/* Maintain a visible focus indicator for keyboard navigation */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid #ff0000; /* Example: red outline for keyboard focus */
+  outline-offset: 2px;
+}
+
+p a {
+  color: var(--wp--preset--color--custom-blue-2);
+  text-decoration: underline; /* Remove underline by default */
+}
+
+p a:hover {
+  text-decoration: none; /* Add underline on hover */
+}
+
+.pages-top-outer-div {
+  margin-top: 0px;
+}  
+
+a.skip-link, .skip-link.screen-reader-text, .screen-reader-text {
+  display: none !important;
+}
+
+.circle-image-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  transition: border 0.3s ease;
+  box-sizing: border-box; /* Include border in the element's dimensions */
+}
+
+.circle-image-container:hover {
+  border: 5px solid  var(--wp--preset--color--custom-orange);
+}
+
+/* Focus outline for the circle image container */
+.circle-image-container:focus {
+  outline: 2px solid var(--wp--preset--color--custom-orange) !important;
+}
+
+.circle-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+
+.force-centered {
+  text-align: center; /* Center the text inside the button */  
+}
+
+  /* HEADER styles and customizations ----------------- */
+  .custom-homepage-header {
+      background-image: url("/wp-content/uploads/2024/05/home-page-header-placeholder.png");
+      height: 315px;
+      width: 100%;
+  }
+
+  .custom-homepage-header .wp-block-site-logo {
+      padding-top: 20px;
+  }
+
+  .custom-homepage-header .wp-block-site-logo img {
+    padding-top: 115px;
+  }
+
+  body .page-template-custom-homepage {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .headline-column h1 {
+    font-size: 4.5rem;
+    max-width: 550px;
+    color: var(--wp--preset--color--custom-white);
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+
+  .headline-column h2 {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+
+  /* HOMEPAGE STYLES ////////////////////// */
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in-1-sec {
+    animation: fadeIn 2s ease-in-out 1s forwards;
+    opacity: 0; /* Ensures the element is initially hidden */
+}
+
+.fade-in-2-sec {
+    animation: fadeIn 2s ease-in-out 2s forwards;
+    opacity: 0;
+}
+
+.fade-in-3-sec {
+    animation: fadeIn 2s ease-in-out 3s forwards;
+    opacity: 0;
+}
+
+.fade-in-4-sec {
+    animation: fadeIn 2s ease-in-out 4s forwards;
+    opacity: 0;
+}
+
+.fade-in-5-sec {
+    animation: fadeIn 2s ease-in-out 5s forwards;
+    opacity: 0;
+}
+
+.fade-in-6-sec {
+    animation: fadeIn 2s ease-in-out 6s forwards;
+    opacity: 0;
+}
+
+.fade-in-7-sec {
+    animation: fadeIn 2s ease-in-out 7s forwards;
+    opacity: 0;
+}
+
+.fade-in-8-sec {
+    animation: fadeIn 2s ease-in-out 8s forwards;
+    opacity: 0;
+}
+
+.fade-in-9-sec {
+    animation: fadeIn 2s ease-in-out 9s forwards;
+    opacity: 0;
+}
+
+.fade-in-10-sec {
+    animation: fadeIn 2s ease-in-out 10s forwards;
+    opacity: 0;
+}
+
+.fade-in-11-sec {
+  animation: fadeIn 2s ease-in-out 11s forwards;
+  opacity: 0;
+}
+
+.fade-in-12-sec {
+  animation: fadeIn 2s ease-in-out 12s forwards;
+  opacity: 0;
+}
+
+.fade-in-1_5-sec {
+  animation: fadeIn 2s ease-in-out 1s forwards;
+  opacity: 0; /* Ensures the element is initially hidden */
+}
+
+.fade-in-2_5-sec {
+  animation: fadeIn 2s ease-in-out 2.5s forwards;
+  opacity: 0;
+}
+
+.fade-in-3_5-sec {
+  animation: fadeIn 2s ease-in-out 3.5s forwards;
+  opacity: 0;
+}
+
+.fade-in-4_5-sec {
+  animation: fadeIn 2s ease-in-out 4.5s forwards;
+  opacity: 0;
+}
+
+.fade-in-5_5-sec {
+  animation: fadeIn 2s ease-in-out 5.5s forwards;
+  opacity: 0;
+}
+
+.fade-in-6_5-sec {
+  animation: fadeIn 2s ease-in-out 6.5s forwards;
+  opacity: 0;
+}
+
+.fade-in-7_5-sec {
+  animation: fadeIn 2s ease-in-out 7.5s forwards;
+  opacity: 0;
+}
+
+.fade-in-8_5-sec {
+  animation: fadeIn 2s ease-in-out 8.5s forwards;
+  opacity: 0;
+}
+
+.fade-in-9_5-sec {
+  animation: fadeIn 2s ease-in-out 9.5s forwards;
+  opacity: 0;
+}
+
+.fade-in-10_5-sec {
+  animation: fadeIn 2s ease-in-out 10.5s forwards;
+  opacity: 0;
+}
+
+.fade-in-11_5-sec {
+animation: fadeIn 2s ease-in-out 11.5s forwards;
+opacity: 0;
+}
+
+.fade-in-12_5-sec {
+animation: fadeIn 2s ease-in-out 12.5s forwards;
+opacity: 0;
+}
+
+/* Styles for ANIMATE  ON  SCROLL ELEMENTS ----- - - - - - - - -  */
+
+/* Hide elements by default */
+.animate-on-scroll,
+p:not(.no-animation),
+figcaption:not(.no-animation),
+h1:not(.no-animation),
+h2:not(.no-animation),
+h3:not(.no-animation),
+h4:not(.no-animation),
+h5:not(.no-animation),
+h6:not(.no-animation),
+.wp-block-image:not(.no-animation) {
+    opacity: 0;
+    transition: opacity 2s ease-out;
+}
+
+/* Add this class when the element is in view */
+.in-view {
+    animation: fadeIn 2s forwards; /* or whatever your animation is */
+}
+
+/* Additional animation for wp-block-image and figcaption */
+.wp-block-image.in-view,
+figcaption.in-view {
+    animation: fadeIn50 2s forwards;
+}
+
+@keyframes fadeIn50 {
+    from {
+        opacity: 0.2;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Target p, h2, and img elements within .special-div and apply styles */
+.no-animation-div p,
+.no-animation-div h1,
+.no-animation-div h2,
+.no-animation-div h3,
+.no-animation-div h4,
+.no-animation-div h5,
+.no-animation-div h5,
+.no-animation-div figcaption,
+.no-animation-div .wp-block-image,
+.no-animation-div .wp-block-audio {
+  animation: none !important; /* Disable animations */
+  transition: none !important; /* Disable transitions */
+  opacity: 1 !important; /* Ensure elements are visible */
+  /* Add any additional styles that should be applied by .no-animation */
+}
+
+.anchor-object-absolute-container {
+  width: 100vw;
+  max-height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.anchor-background {
+  position: absolute;
+  top: 0;
+  /*left: 0;*/
+  width: 100%;
+  height: 100%;
+  /* background-image: url('/wp-content/uploads/2024/07/map-masked-LARGE-CROPPED.png'); */
+  background-image: url('/wp-content/uploads/2024/07/map-masked-2.svg');
+  background-size: 0% 0%;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+
+.anchor-text a {
+  color: var(--wp--preset--color--custom-white);
+  text-decoration: underline; /* Remove underline by default */
+}
+
+.anchor-text a:hover {
+  text-decoration: none; /* Add underline on hover */
+}
+
+@keyframes expand-background {
+  from {
+      background-size: 0% 0%;
+  }
+  to {
+      background-size: 100% 100%;
+  }
+}
+
+/* Trigger expand-background animation when in view */
+.in-view.anchor-background {
+  animation: expand-background 3s forwards;
+}
+
+.anchor-object-background-image-div {
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.behind-the-anchor {
+	position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+  .background-extension {
+    position: absolute;
+    top: 20px;
+    left: -550px;
+    height: 83px;
+    width: 850px;
+    background-color: var(--wp--preset--color--custom-blue-1);
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  .custom-audio-player {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 2px solid #f16641;
+    border-radius: 50px;
+    height: 50px;
+    background-color: white;
+    padding: 0 10px;
+    gap: 5px;
+}
+
+.play-pause,
+.sound-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.play-pause img,
+.sound-toggle img {
+    height: 30px;
+    width: 30px;
+}
+
+.time,
+.duration {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+}
+
+.separator {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+}
+
+.progress-container {
+    flex: 1;
+    height: 10px;
+    background-color: #BDCBDD;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #455588;
+    width: 0;
+}
+
+  figure .wp-block-audio {
+    z-index: 100;
+    position: relative;
+    padding-bottom: 40px;
+    padding-top: 30px;
+  }
+
+  .wp-block-audio {
+    box-sizing: border-box;
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+
+  figcaption {
+    text-align: left;
+    position: relative;
+    z-index: -1;
+  }
+
+  .wp-block-audio figcaption {
+    margin-top: -50px;
+    max-width: 500px;
+    background-color: #DCE4EF;
+    color: #272835;
+    margin-left: -15px;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    font-weight: 400;
+    position: relative;
+    z-index: -1;
+    min-width: 200px;
+    font-weight: 400;
+    font-size: 0.8rem;
+  }
+
+  .wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+    margin-bottom: 1em;
+    margin-top: -25px;
+    color: #272835;
+    max-width: 400px;
+    margin-left: -18px; /*previously 25px */
+    padding-top: 35px;
+    padding-left: 25px;
+    padding-bottom: 10px;
+    font-weight: 400;
+    padding-right: 100px;
+    background: linear-gradient(0deg,#B9CADF,#B9CADF 0%,#B9CADF);
+    background-color: #B9CADF;
+    text-align: left;
+    position: relative;
+    z-index: -1;
+    max-height: 130px !important;
+  }
+
+  figure.wp-block-image figcaption {
+    margin-bottom: 1em;
+    margin-top: -25px;
+    color: #272835;
+    max-width: 400px;
+    margin-left: -18px; /*previously 25px */
+    padding-top: 35px;
+    padding-left: 25px;
+    padding-bottom: 10px;
+    font-weight: 400;
+    padding-right: 100px;
+    background: linear-gradient(0deg,#B9CADF,#B9CADF 0%,#B9CADF);
+    background-color: #B9CADF;
+    text-align: left;
+    position: relative;
+    z-index: -1;
+    max-height: 130px !important;    
+  }
+
+  .wp-block-video figcaption {
+    margin-bottom: 1em;
+    margin-top: -25px;
+    color: #272835;
+    max-width: 400px;
+    background-color: #B9CADF;
+    margin-left: -18px; /*previously 25px */
+    padding-top: 35px;
+    padding-left: 25px;
+    padding-bottom: 10px;
+    font-weight: 400;
+    padding-right: 100px;
+    position: relative;
+    z-index: -1;
+  }
+
+  .wp-block-embed figcaption { /*  Used for YouTube videos  */
+    margin-bottom: 1em;
+    margin-top: -25px;
+    color: #272835;
+    max-width: 400px;
+    background-color: #B9CADF;
+    margin-left: -18px; /*previously 25px */
+    padding-top: 35px;
+    padding-left: 25px;
+    padding-bottom: 10px;
+    font-weight: 400;
+    padding-right: 100px;
+    position: relative;
+    z-index: -1;
+  }
+
+  .block-captions { /* styles for multiple captions inside div below gallery */
+    color: #272835; /* Dark Grey */
+    font-family: 'Fira Sans', sans-serif; /* Fira Sans Medium */
+    font-size: 12px; /* Text size */
+    line-height: 150%; /* Line height */
+    font-weight: 400; /* Font weight */
+  }
+
+  /* BODY styles and customizations ----------------- */
+
+  /* Homepage styles and customizations ----------------- */
+  .homepage-body-outer {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent horizontal overflow */
+    background-image: url("/wp-content/uploads/2024/06/map-illustration-spotlight.png");
+    background-size: cover; /* Ensure the image covers the entire height */
+    background-position: center; /* Center the image horizontally */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    /* height: 100vh;   */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content horizontally */    
+    align-items: center; /* Center content vertically */
+    min-height: 100vh; /* Added to solve scrolling issue on mobile */
+  }  
+
+  .homepage-body-inner {
+    height: 100%;
+    overflow-y: auto; /* Make inner content scrollable */
+    width: 100%; 
+  }   
+
+  .homepage-sightlines-atlas-title {
+    width: auto;
+    /* margin-top: 12.5% !important; */
+  }
+
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .homepage-sightlines-atlas-title {
+      margin-top: 40px !important;
+    }
+  }
+  
+    .homepage-fixed-for-video {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -99;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-block-start: 0 !important;
+  }
+
+  .homepage-columns {
+      display: flex;
+      width: 100%;
+      height: 100%;
+  }
+
+  .homepage-column {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .homepage-left-column {
+      width: 43%;
+      background-color: #DE6D40;
+      animation: slideLeft-homepage 4.5s forwards;
+  }
+
+  .homepage-right-column {
+      width: 57%;
+      background-color: #DE6D40;
+      animation: slideRight-homepage 4.5s forwards;
+  }
+
+  .homepage-column video {
+      position: absolute;
+      top: 0;
+      width: auto;
+      height: 100%;
+  }
+
+  .homepage-left-column video {
+      right: 0;
+  }
+
+  .homepage-right-column video {
+      left: 0;
+  }
+  
+  .homepage-left-column video, .homepage-right-column video {
+      position: absolute;
+      top: 0;
+      width: auto;
+      height: 100%;
+      z-index: 1;
+  }
+
+
+  @keyframes slideLeft-homepage {
+      0% { transform: translateX(0); }
+      65% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+  }
+
+  @keyframes slideRight-homepage {
+      0% { transform: translateX(0); }
+      65% { transform: translateX(0); }
+      100% { transform: translateX(100%); }
+  }
+
+/* Media query for mobile devices */
+@media (max-width: 576px) {
+    .homepage-sightlines-atlas-title {
+        width: 297px;
+    }
+}
+
+
+  /* WPB RAND GRID styles ---------- */
+  div.wpb-rand-post-item a {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 500; /* Medium */
+    font-size: 18px;
+    color: #28315B;
+    text-decoration: none;
+    display: block; /* Ensure the link is block-level to occupy the full space */
+  }
+
+  .wpb-rand-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.wpb-rand-post-item {
+    text-align: center;
+    position: relative;
+}
+
+.wpb-rand-post-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--wp--preset--color--custom-blue-1); /* Adjust this color as needed */
+    position: relative; /* Ensure it has relative positioning if needed */
+    z-index: 10; /* Adjust z-index as needed */
+    pointer-events: auto; /* Ensure links can be clicked */
+    width: 100%; /* Ensure the link occupies the full width of its parent */
+    height: 100%; /* Ensure the link occupies the full height of its parent */
+}
+
+.wpb-rand-post-title:focus {
+    outline: 2px solid var(--wp--preset--color--custom-orange) !important;  
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .wpb-rand-posts-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .wpb-rand-posts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.sticky-menu {
+  position: absolute; /* Change from fixed to absolute */
+  top: -32px;
+  right: calc((100% - 1280px) / 2 - 70px); /* Center with respect to the 1280px margin */
+  width: 140px;
+  height: 140px;
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+/* Media query for screens 1538px wide or smaller */
+@media (max-width: 1538px) {
+  .sticky-menu {
+    right: 50px; /* Adjust position for smaller screens */
+  }
+}
+
+.custom-nav-button {
+  position: relative;
+}
+
+.article-image-text-group {
+  margin-block-start: 0;
+  margin-block-end: 40px;
+  position: relative;
+}
+
+.article-image-text-group-bg-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-image-text-group-bg-image-container img {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* Article left column with blue background 85% opacity */
+.article-image-left-outer {
+  position: relative;
+  background-color: var(--wp--preset--color--custom-blue-1);
+  opacity: 85%;
+  height: 100vh;
+  max-height: 575px;
+  overflow: hidden;
+}
+
+
+.article-image-left-inner {
+    height: 100%; /* Make inner div take the full height of the outer div */
+    width: 100%; /* Make inner div take the full width of the outer div */
+    display: flex; /* Use flex to center the image */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    overflow: hidden; /* Ensure overflow is hidden */
+}
+
+.article-image-left-inner img{
+  filter: grayscale(100%);
+  mix-blend-mode: multiply;
+  height: 100%; /* Ensure the height of the image adjusts to the parent height */
+  width: auto; /* Adjust width automatically to keep the aspect ratio */
+  position: absolute; /* Position the image absolutely within the container */
+  top: 50%; /* Move the image to the center vertically */
+  left: 50%; /* Move the image to the center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for the center position */
+  object-fit: cover; /* Cover the container, cropping if necessary */
+}
+
+.article-image-left-site-title {
+  position: absolute;
+  top: 20px; /* Position halfway down the outer div */
+  z-index:1000;  
+  background-color: var(--wp--preset--color--custom-blue-1);
+}
+
+.article-image-left-page-title {
+  position: absolute;
+  bottom: 40px; /* Position halfway down the outer div */
+  color: var(--wp--preset--color--custom-white);
+  z-index:100;
+  text-align: left; /* Align text to the left */
+}
+
+.article-text-right {
+  position: relative;
+  padding-top: 100px;
+}
+
+.article-text-right-inner {
+  /* max-width: 430px; // OLD WIDTH */
+  max-width: 550px;
+}
+
+.article-text-right p {
+  padding-left: 20px;
+  padding-right: 40px;
+}
+
+@media (max-width: 768px) {
+  .article-image-left-site-title {
+    top: 20px; /* Position halfway down the outer div */
+    left: 20px; /* Position halfway across the outer div */
+  }
+  
+  .article-image-left-page-title {
+    left: 20px; /* Position halfway across the outer div */
+  }
+
+  .article-text-right {
+    padding-top: 0px;
+  }
+
+  .article-text-right-inner {
+    max-width: 660px;
+    padding-top: 20px;
+  }
+
+  .article-text-right p {
+    padding-left: 50px;
+    padding-right: 50px;  
+  }
+
+  .sticky-menu {
+    right: 10px;
+  }
+
+  .thumbnail-grid {
+    margin-bottom: 100px !important;
+  }
+}
+
+.image-background-style1, .image-background-style2, .image-background-style3, .image-background-style4 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.image-background-style1 {
+  position: relative; /* Ensure the div is positioned correctly */
+  height: auto; /* Adjust height as needed */
+  overflow: hidden; /* Hide any overflow of the image */
+}
+
+.image-background-style1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/wp-content/uploads/2024/07/background1.svg') no-repeat center center;
+  background-size: cover; /* Cover the entire div area */
+  z-index: -1; /* Ensure it stays behind any content within the div */
+}
+
+.image-background-style2 {
+  position: relative; /* Ensure the div is positioned correctly */
+  height: auto; /* Adjust height as needed */
+  overflow: hidden; /* Hide any overflow of the image */
+}
+
+.image-background-style2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/wp-content/uploads/2024/07/background2.svg') no-repeat center center;
+  background-size: cover; /* Cover the entire div area */
+  z-index: -1; /* Ensure it stays behind any content within the div */
+}
+
+.image-background-style3 {
+  position: relative; /* Ensure the div is positioned correctly */
+  height: auto; /* Adjust height as needed */
+  overflow: hidden; /* Hide any overflow of the image */
+}
+
+.image-background-style3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/wp-content/uploads/2024/07/background3.svg') no-repeat center center;
+  background-size: cover; /* Cover the entire div area */
+  z-index: -1; /* Ensure it stays behind any content within the div */
+}
+
+.image-background-style4 {
+  position: relative; /* Ensure the div is positioned correctly */
+  height: auto; /* Adjust height as needed */
+  overflow: hidden; /* Hide any overflow of the image */
+  background-color: rgba(189,203,221, 0.5); /* Apply background color with 50% opacity */
+}
+
+
+.covering {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  width: 100%;
+  height:100%;
+  }
+
+
+.from-the-exhibition-container {
+  position: relative;
+}
+
+.from-the-exhibition-container figure {
+  position: absolute;
+  margin-top: -20px;
+}
+
+.from-the-exhibition-container2 figure {
+  position: absolute;
+  margin-top: -20px;
+  margin-left: -13px;
+  z-index: -1;
+}
+
+.align-link-bottom {
+  margin-top: auto; /* aligns from the exhibit link to bottom of box */
+}
+
+.anchor-object-container {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.anchor-top-content {
+  background-color: var(--wp--preset--color--custom-blue-2);
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 390px;
+}
+
+.anchor-top-content img {
+  padding: 10px;
+}
+
+.anchor-image {
+  flex: 1;
+  max-width: 100%;
+  overflow: hidden;
+  height: 200px; /* Set a fixed height to make it wide */
+  margin-bottom: 20px;
+}
+
+.anchor-featured-image {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.anchor-text {
+  flex: 1;
+  max-width: 100%; /* Adjusted for smaller screens */
+  color: var(--wp--preset--color--custom-white);
+}
+
+.anchor-text h4, p {
+  margin-top: 0;
+  padding: 10px;
+}
+
+.anchor-bottom-content {
+  background-color: var(--wp--preset--color--custom-white);
+  padding: 20px;
+}
+
+/* Read More  Styles */
+.read-more-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.read-more-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.read-more-image {
+  flex: 0 0 125px;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.read-more-content {
+  flex: 1;
+  color: var(--wp--preset--color--custom-white);
+}
+
+.read-more-content h5 {
+  margin: 0 0 10px 0;
+}
+
+
+.read-more-arrow img {
+  width: 40px; /* Adjust size as needed */
+  height: auto;
+  vertical-align: middle;
+}
+
+/* Focus outline for the image section */
+.read-more-image:focus {
+  outline: 2px solid var(--wp--preset--color--custom-orange) !important;
+}
+
+/* Focus outline for the content section */
+.read-more-content:focus {
+  outline: 2px solid var(--wp--preset--color--custom-orange) !important;
+}
+
+/* Focus outline for the arrow container */
+.read-more-arrow-container:focus {
+  outline: 2px solid var(--wp--preset--color--custom-orange) !important;
+}
+
+.fancybox-close {
+  background-image: url(/wp-content/uploads/2024/06/x-button-orange.svg) !important;;
+  background-size: unset !important;
+  background-repeat: no-repeat;
+}
+
+.fancybox-prev span {
+  background-image: url(/wp-content/uploads/2024/08/prev-arrow-lightbox.png) !important;;
+  background-size: unset !important;
+  background-repeat: no-repeat;
+  background-position: 0 0 !important;
+  width: 34px !important;
+  height: 34px !important;
+}
+
+.fancybox-next span {
+  background-image: url(/wp-content/uploads/2024/08/next-arrow-lightbox.png) !important;;
+  background-size: unset !important;
+  background-repeat: no-repeat;
+  background-position: 0 0 !important;
+  width: 34px !important;
+  height: 34px !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) {
+  .read-more-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+.read-more-image {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  transition: border 0.3s ease, transform 0.3s ease;
+}
+
+.read-more-image:hover {
+  border: 5px solid var(--wp--preset--color--custom-orange);
+}
+
+.read-more-item a:focus,
+.read-more-content a:focus,
+.read-more-arrow:focus {
+    outline: 2px solid #007BFF; /* Example focus style */
+    outline-offset: 2px; /* Optional: Adjust outline offset */
+}
+
+.read-more-item img:focus,
+.read-more-content img:focus,
+.read-more-arrow img:focus {
+    outline: 2px solid #007BFF; /* Example focus style */
+    outline-offset: 2px; /* Optional: Adjust outline offset */
+}
+
+
+@media (max-width: 768px) {
+  .anchor-top-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .anchor-image,
+  .anchor-text {
+    max-width: 100%;
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .anchor-page-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .anchor-page {
+    max-width: 100%;
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.anchor-page-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -10px;
+  width: calc(100% + 20px);
+  box-sizing: border-box;
+}
+
+.anchor-page {
+  flex: 1 1 calc(50% - 20px); /* Adjusted to match the grid structure */
+  margin: 10px;
+}
+
+.anchor-link-container {
+  display: flex;
+  align-items: center;
+}
+
+/*
+.circle-image-container {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+*/
+
+.anchor-page-title {
+  overflow: hidden;
+  color: var(--wp--preset--color--custom-white);
+  text-align: left;
+}
+
+.anchor-page-title h5 {
+  margin: 0;
+}
+
+.anchor-page-title a {
+  color: var(--wp--preset--color--custom-blue-2);
+  text-decoration: none;
+}
+
+/* Multi Story Posts Grid Styles */
+
+
+/* Style for the TRANSCRIPT element */
+/* Hide the checkbox */
+.transcript-toggle {
+  display: none;
+}
+
+/* Header section with the toggle button and arrow */
+.transcript-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px; /* Adjusted padding */
+  background-color: #F2F5F8;
+  cursor: pointer;
+  font-size: 1.2em;
+  list-style: none;
+  font-weight: bold; /* Makes the text bold */
+}
+
+/* Arrow style */
+.transcript-header .arrow {
+  width: 24px; /* Adjust size as needed */
+  height: 24px; /* Adjust size as needed */
+  transition: transform 0.2s ease; /* Smooth transition for rotation */
+  transform: rotate(0deg); /* Default state for the arrow */
+}
+
+/* Content container */
+.transcript-content {
+  max-height: 0; /* Collapsed by default */
+  overflow: hidden;
+  opacity: 0; /* Hidden by default */
+  transition: max-height 0.6s ease, opacity 0.6s ease; /* Smooth transition */
+  padding: 0 20px;
+  background-color: #FFFFFF;
+}
+
+/* When the checkbox is checked, expand the content */
+.transcript-toggle:checked + .transcript-header + .transcript-content {
+  max-height: none; /* Adjust based on content size or use a large value */
+  opacity: 1; /* Visible */
+}
+
+/* Rotate the arrow when the content is expanded */
+.transcript-toggle:checked + .transcript-header .arrow {
+  transform: rotate(180deg); /* Rotate back to ^ */
+}
+
+/* Hover effect for the header */
+.transcript-header:hover {
+  background-color: #BDCBDD;
+}
+
+
+  /* FOOTER styles and customizations ----------------- */
+  div .apac-custom-footer {
+      background-color: var(--wp--preset--color--custom-blue-1);
+      color: var(--wp--preset--color--custom-white);
+  }
+
+  div .apac-custom-footer h4 {
+    color: var(--wp--preset--color--custom-white);
+  }
+
+
+  /* Custom CSS for homepage story block */
+  div .wp-block-group .homepage-story-block {
+    border: 2px solid #000; /* Add an outline with a 2px solid black border */
+    padding: 20px; /* Add padding for spacing inside the div */
+    text-align: center; /* Center align all text inside the div */
+  }
+
+  .about-resources a {
+    color: var(--wp--preset--color--custom-white);
+    padding-left: 10px;
+  }
+
+.post-popup {
+  background-image: url("/wp-content/uploads/2024/06/popup-spotlight.svg");
+  margin-block-start: 0;
+}  
+
+/* Add slide-up animation */
+@keyframes slideUp {
+  from {
+      transform: translateY(100%);
+  }
+  to {
+      transform: translateY(0);
+  }
+}
+
+/* Add slide-down animation */
+@keyframes slideDown {
+  from {
+      transform: translateY(0);
+  }
+  to {
+      transform: translateY(100%);
+  }
+}
+
+.post-popup.animate-slide-up.show {
+  animation: slideUp 0.5s ease-out;
+}
+
+.post-popup.animate-slide-down {
+  animation: slideDown 0.5s ease-out;
+}
+
+/* Ensure the close button is sticky and positioned at the top right */
+.close-post-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 20px; /* Ensure this margin is applied */
+  width: 48px;
+  height: 48px;
+  z-index: 10000;
+}
+
+/* Add slide-LEFT animation 
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.popup {
+  animation: slideIn 0.5s forwards;
+  background-image: url("/wp-content/uploads/2024/06/menu-spotlight.svg");
+  margin-block-start: 0;
+  background-size: cover;
+}
+
+.closed {
+  animation: slideOut 0.5s forwards;
+}
+*/
+.article-image-left-outer {
+  position: relative;
+  background-color:  var(--wp--preset--color--custom-blue-1);
+  opacity: 85%;
+  height: 100vh;
+}
+
+  /* RESPONSIVE styles for tablets and smaller devices */
+@media (max-width: 576px) {
+  /* Homepage centered title  ----------------- */
+  figure .homepage-custom-title img {
+    height: 28px;
+  }
+  .homepage-body-outer {
+    height: auto;
+    min-height: 100vh; /* Full viewport height */
+  }  
+
+  .wp-block-site-logo img {
+    height: 28px !important;
+    max-width: 75%;
+    padding: 15px;
+      padding-top: 15px;
+    padding-top: 25px !important;
+  }
+
+  .sticky-menu {
+    right: 0px;
+    padding-left: 19px;
+  }
+
+  .popup-logo {
+    height: 40px !important;
+  }
+
+  .headline-column h1 {
+    font-size: 3rem !important;
+  }
+
+  .background-extension {
+    height: 73px;
+    left: -585px;
+  }
+}
+
+@media (min-width: 1835px) {
+  .background-extension {
+    width: calc(100% - 1280px / 2 - 10%);
+  }
+}
+
+@media (min-width: 2333px) {
+  .background-extension {
+    width: calc(100% - 1280px / 2 - 15%);
+  }
+}
+
+
+
+

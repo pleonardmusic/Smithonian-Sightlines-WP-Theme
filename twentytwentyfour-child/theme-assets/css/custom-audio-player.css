@@ -1,0 +1,59 @@
+/* CSS for custom audio player */
+audio {
+    display: none; /* Hides the default audio player */
+}
+
+/* Custom audio player styles */
+.custom-audio-player {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 2px solid #f16641;
+    border-radius: 50px;
+    height: 50px;
+    background-color: white;
+    padding: 0 10px;
+    gap: 5px;
+}
+
+.play-pause,
+.sound-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.play-pause img,
+.sound-toggle img {
+    height: 30px;
+    width: 30px;
+}
+
+.time,
+.duration {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+}
+
+.separator {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+}
+
+.progress-container {
+    flex: 1;
+    height: 10px;
+    background-color: #BDCBDD;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #455588;
+    width: 0;
+}

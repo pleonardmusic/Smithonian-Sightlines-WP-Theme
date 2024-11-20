@@ -1,0 +1,284 @@
+/* Popup styles */
+/*
+.popup { 
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    right: -100%; 
+    width: 100%; 
+    height: 100%; 
+    overflow-y: auto; 
+    z-index: 9999; 
+    padding-top: 20px; 
+    background-color: var(--wp--preset--color--custom-blue-2); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out; 
+    opacity: 0; 
+}
+*/
+/* Keyframes for the popup animation */
+/* Define slide animations */
+@keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+  
+  /* Popup styling */
+  .popup, .popup * {
+    opacity: 1 !important; /* Override global opacity settings */
+    transition: none !important; /* Remove global transition settings */
+  }
+
+  .popup .in-view {
+    opacity: 1 !important; /* Ensure elements are visible */
+    transition: none !important; /* Remove transition if needed */
+}
+
+.popup .animate-on-scroll {
+    opacity: 1 !important; /* Make sure popup content is always visible */
+    transition: none !important; /* Disable transition if needed */
+}
+
+.popup {
+    display: none; /* Hide by default */
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially hidden off-screen */
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    padding-top: 20px;
+    background-color: var(--wp--preset--color--custom-blue-2); /* Solid background color */
+    background-image: url("/wp-content/uploads/2024/06/menu-spotlight.svg"); /* Transparent image overlay */
+    background-size: cover;
+    background-blend-mode: overlay; /* Blend mode to combine background color and image */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition for showing/hiding */
+    opacity: 0;
+    transform: translateX(100%); /* Start position for slideIn */
+    overflow-y: auto;
+}
+  
+/* Class to show the popup */
+.popup.show {
+    display: block;
+    right: 0; /* Move popup into view */
+    opacity: 1;
+    animation: slideIn 0.5s forwards;
+    transform: translateX(0); /* Final position for slideIn */
+    text-align: left;
+    margin-block-start: 0;
+}
+  
+/* Class to hide the popup */
+.popup.closed {
+    right: -100%; /* Move popup out of view */
+    opacity: 0;
+    animation: slideOut 0.5s forwards; /* Optional animation for hiding */
+    transform: translateX(100%); /* Move popup out of view */
+}
+  
+
+/*  
+.popup.show { 
+    right: 0 !important; 
+    opacity: 1 !important; 
+}
+
+.popup.hide { 
+    right: -100%; 
+    opacity: 0; 
+}
+*/
+.popup-logo-container { 
+    text-align: center; 
+}
+.popup-logo { 
+    height: 54px; 
+}
+.thumbnail-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    max-width: 660px; 
+    margin: 0 auto; 
+    margin-bottom: 50px;
+}
+.thumbnail-wrapper { 
+    text-align: center; 
+}
+
+.thumbnail-link { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-decoration: none; 
+    color: var(--wp--preset--color--custom-blue-1); 
+    font-family: "Fira Sans", sans-serif; 
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for visual feedback */
+}
+
+/* Ensure focus is visible when the element is focused via keyboard (focus-visible) */
+.thumbnail-link:focus-visible, 
+.thumbnail-link.focus-visible {
+    outline: 2px solid var(--wp--preset--color--custom-orange) !important;
+    color: #fff; /* Change text color for contrast */
+}
+
+/* Remove default outline when the element is focused via mouse or other non-keyboard methods */
+.thumbnail-link:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.post-title { 
+    margin-top: 10px; 
+    font-size: 18px; 
+    color: var(--wp--preset--color--custom-white); 
+    font-family: "Fira Sans", sans-serif; 
+}
+.circle-image-container { 
+    width: 150px; 
+    height: 150px; 
+    margin: 0 auto; 
+    overflow: hidden; 
+    border-radius: 50%; 
+}
+.circle-image { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+.custom-nav-button { 
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer; 
+    padding: 0; 
+    margin: 0; 
+    width: 80px; 
+    height: 80px; 
+    position: relative; 
+    margin-top: 44px; 
+}
+.custom-nav-button:focus {
+    outline: 2px solid var(--wp--preset--color--custom-orange);
+}
+.icon { 
+    display: none; 
+}
+.compass-container { 
+    width: 100%; 
+    height: 100%; 
+    position: relative; 
+    margin: 0 auto; 
+}
+.compass-container::before { 
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    border-radius: 50%; 
+    box-shadow: 0 0 0 0 transparent; 
+    transition: box-shadow 0.3s ease-in-out; 
+}
+.compass-container:hover::before { 
+    box-shadow: 0 0 0 5px var(--wp--preset--color--custom-orange); 
+}
+.compass { 
+    width: 100%; 
+    height: 100%; 
+    background-image: url('/wp-content/uploads/2024/07/compas-background.svg'); 
+    background-size: cover; 
+    position: relative; 
+    border-radius: 50%; 
+}
+.needle { 
+    width: 100%; 
+    height: 100%; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    transition: transform 0.5s ease-in-out; 
+}
+.compass-container:hover .needle { 
+    transform: rotate(180deg); 
+}
+.close-popup-button { 
+    position: fixed; 
+    top: 40px; 
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer; 
+    padding: 0; 
+    margin: 20px; 
+    margin-left: calc(100% - 100px);
+    width: 48px; 
+    height: 48px; 
+    z-index: 10000; 
+}
+.close-popup-button img { 
+    width: 100%; 
+    height: 100%; 
+}
+.close-popup-button:focus {
+    outline: 2px solid var(--wp--preset--color--custom-orange);
+}
+@media (max-width: 768px) {
+    .thumbnail-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .post-title { 
+        font-size: 18px; 
+        max-width: 300px; 
+    }
+    .circle-image-container { 
+        width: 150px; 
+        height: 150px; 
+    }
+    .close-popup-button { 
+        width: 34px; 
+        height: 34px; 
+        margin-left: calc(100% - 50px);
+    }
+}
+@media (max-width: 576px) {
+    .thumbnail-grid { 
+        grid-template-columns: 1fr; 
+    }
+    .post-title { 
+        font-size: 14px; 
+    }
+    .circle-image-container { 
+        width: 140px; 
+        height: 140px; 
+    }
+    .close-popup-button { 
+        width: 34px; 
+        height: 34px; 
+    }
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
